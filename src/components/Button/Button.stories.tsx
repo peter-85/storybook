@@ -9,13 +9,8 @@ const meta = {
   component: Button,
 
   decorators: [
-    (Story, storyContext) => {
-      console.log(storyContext, "storyContext");
-      return (
-        <div style={{ backgroundColor: "red" }}>
-          <Story />
-        </div>
-      );
+    (Story) => {
+      return <Story />;
     },
   ],
   parameters: {
