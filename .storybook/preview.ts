@@ -10,9 +10,6 @@ const preview: Preview = {
     },
     //adding layout on a global level
     layout: "centered",
-    docs: {
-      toc: true, // 👈 Enables the table of contents
-    },
   },
 };
 
