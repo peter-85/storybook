@@ -6,7 +6,6 @@ import { Button } from "./Button";
 const meta = {
   title: "Design System/Atoms/Button",
   component: Button,
-  // description: "Description of the component",
   decorators: [
     (Story) => {
       return <Story />;
@@ -40,7 +39,7 @@ const meta = {
     // },
     label: {
       // this is shown in the documentation/description column
-      description: "Button content11",
+      description: "Button content",
 
       table: {
         // if we want to remove something from the table of the document and controls
@@ -62,21 +61,21 @@ const meta = {
 
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   //Define the default value for args
-  args: { onClick: fn(), label: "Button" },
+  args: { onClick: fn(), label: "Button", size: "medium" },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
     type: "primary",
   },
   argTypes: {
-    type: {
-      table: { disable: true },
-    },
+    // render the prop without control
+    // type: {
+    //   control: false,
+    // },
   },
 };
 

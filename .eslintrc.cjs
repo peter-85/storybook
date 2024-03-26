@@ -1,3 +1,5 @@
+const vitest = require("eslint-plugin-vitest");
+
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
@@ -6,6 +8,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "plugin:storybook/recommended",
+    "plugin:vitest/recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
@@ -16,5 +19,11 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "@stylexjs/valid-styles": "error",
+    "no-unused-vars": "warn", // warning, not error
+    "vitest/expect-expect": "off", // eliminate distracting red squiggles while writing tests
+    "react/prop-types": "off", // turn off props validation
+  },
+  globals: {
+    ...vitest.environments.env.globals,
   },
 };

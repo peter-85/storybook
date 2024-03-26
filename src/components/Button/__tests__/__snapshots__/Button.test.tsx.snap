@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should match the snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="Button__styles.button xrt6l7w x1xlr1w8 x1wty727 xgvv9zi x1ypdohk x1rg5ohu xo5v014 Button__sizeStyles.medium xif65rj x1jye8be Button__typeStyles.primary x1awj2ng x6k178u"
+    type="button"
+  >
+    Button
+  </button>
+</DocumentFragment>
+`;
