@@ -13,7 +13,7 @@ export const styles = stylex.create({
 });
 
 export const sizeStyles = stylex.create({
-  small: { fontSize: "12px", padding: "10px 16px" },
+  small: { fontSize: "11px", padding: "8px 14px" },
   medium: { fontSize: "14px", padding: "11px 20px" },
   large: { fontSize: "16px", padding: "12px 24px" },
 });
@@ -21,7 +21,7 @@ export const sizeStyles = stylex.create({
 export const typeStyles = stylex.create({
   primary: { color: "white", backgroundColor: "#1ea7fd" },
   secondary: {
-    color: "#333",
+    color: "#339",
     backgroundColor: "transparent",
     boxShadow: "rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset",
   },
