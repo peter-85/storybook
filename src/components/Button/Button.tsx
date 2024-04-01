@@ -1,4 +1,4 @@
-import { styles, sizeStyles, typeStyles } from "./Button.styles";
+import { styles, sizeStyles, typeStyles } from "./Button.stylex";
 import * as stylex from "@stylexjs/stylex";
 
 interface ButtonProps {
