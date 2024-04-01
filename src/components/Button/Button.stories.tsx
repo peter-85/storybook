@@ -1,6 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Button } from "./Button";
+import * as stylex from "@stylexjs/stylex";
+import { themeTokens } from "../themeTokens.stylex";
+
+const newTheme = stylex.createTheme(themeTokens, {
+  primary: "purple",
+  secondary: "red",
+});
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -8,7 +15,11 @@ const meta = {
   component: Button,
   decorators: [
     (Story) => {
-      return <Story />;
+      return (
+        <div {...stylex.props(newTheme)}>
+          <Story />
+        </div>
+      );
     },
   ],
   parameters: {

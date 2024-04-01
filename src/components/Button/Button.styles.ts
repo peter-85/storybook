@@ -1,3 +1,4 @@
+import { themeTokens } from "../themeTokens.stylex";
 import * as stylex from "@stylexjs/stylex";
 
 export const styles = stylex.create({
@@ -13,15 +14,24 @@ export const styles = stylex.create({
 });
 
 export const sizeStyles = stylex.create({
-  small: { fontSize: "11px", padding: "8px 14px" },
-  medium: { fontSize: "14px", padding: "11px 20px" },
-  large: { fontSize: "16px", padding: "12px 24px" },
+  small: {
+    fontSize: "11px",
+    padding: `${themeTokens.spacingUnit1} ${themeTokens.spacingUnit2}`,
+  },
+  medium: {
+    fontSize: themeTokens.fontSize6,
+    padding: `${themeTokens.spacingUnit15} ${themeTokens.spacingUnit25}`,
+  },
+  large: {
+    fontSize: themeTokens.fontSize5,
+    padding: `${themeTokens.spacingUnit15} ${themeTokens.spacingUnit3}`,
+  },
 });
 
 export const typeStyles = stylex.create({
-  primary: { color: "white", backgroundColor: "#1ea7fd" },
+  primary: { color: "white", backgroundColor: themeTokens.primary },
   secondary: {
-    color: "#339",
+    color: themeTokens.secondary,
     backgroundColor: "transparent",
     boxShadow: "rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset",
   },
