@@ -6,6 +6,13 @@ import styleX from "vite-plugin-stylex";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), styleX()],
+  resolve: {
+    alias: {
+      "@src": "/src",
+      "@components": "/src/components",
+      "@IndexComponents": "/src/index.ts",
+    },
+  },
   test: {
     globals: true,
     environment: "jsdom",
