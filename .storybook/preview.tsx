@@ -1,13 +1,8 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
-import * as stylex from "@stylexjs/stylex";
-import { themeTokens } from "../src/components/themeTokens.stylex";
+import { defaultTheme, sesameTheme } from "../src/components/themes";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
-
-// const newTheme = stylex.createTheme(themeTokens, {
-//   primary: "purple",
-//   secondary: "red",
-// });
+import { ThemeProvider } from "./themes/ThemeProvider";
 
 const preview: Preview = {
   parameters: {
@@ -23,29 +18,13 @@ const preview: Preview = {
   decorators: [
     withThemeFromJSXProvider({
       themes: {
-        winbet: lightTheme,
-        sesame: darkTheme,
+        Default: defaultTheme,
+        Sesame: sesameTheme,
       },
-      defaultTheme: "winbet",
+      defaultTheme: "Default",
       Provider: ThemeProvider,
     }),
   ],
-  // decorators: [
-  //   (Story) => {
-  //     return (
-  //       <div
-  //         style={{
-  //           backgroundColor: "red",
-  //           display: "flex",
-  //           justifyContent: "center",
-  //           alignItems: "center",
-  //         }}
-  //       >
-  //         <Story />
-  //       </div>
-  //     );
-  //   },
-  // ],
 };
 
 export default preview;

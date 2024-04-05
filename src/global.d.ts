@@ -20,5 +20,6 @@ declare module "react" {
   interface HTMLCustomAttributes<T> extends AriaAttributes, DOMAttributes<T> {
     // extends React's HTMLAttributes
     class?: string;
+    style?: string;
   }
 }

@@ -1,31 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Button } from "./Button";
-// import * as stylex from "@stylexjs/stylex";
-// import { themeTokens } from "../themeTokens.stylex";
-
-// const newTheme = stylex.createTheme(themeTokens, {
-//   primary: "purple",
-//   secondary: "red",
-// });
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: "Design System/Atoms/Button",
   component: Button,
-  // decorators: [
-  //   (Story) => {
-  //     return (
-  //       <div {...stylex.props(newTheme)}>
-  //         <Story />
-  //       </div>
-  //     );
-  //   },
-  // ],
+
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/78v3EtrAirvuDn3WoX0D3h/Sizes-%26-Templates?type=design&node-id=0-1&mode=design&t=SoqjPtWsfGVgUDne-0",
+      url: "https://www.figma.com/file/ttuYjxsSIoCnKgBov9iWUG/Platform_BUs?type=design&node-id=1-4&mode=design&t=gKRehrtE98Fmnv5x-0",
     },
 
     docs: {
@@ -45,7 +30,6 @@ const meta = {
     extraStyles: {
       control: false,
     },
-
     text: {
       // this is shown in the documentation/description column
       description: "Button content",
@@ -63,7 +47,12 @@ const meta = {
     },
     size: {
       // if we want to manipulate the control column in the table of docs and controls
-      // control: "check",
+      options: ["xs", "sm", "md", "lg", "xl", "2xl"],
+      control: { type: "select" },
+    },
+    variant: {
+      options: ["primary", "secondary"],
+      control: { type: "radio" },
     },
   },
 

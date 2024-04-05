@@ -28,6 +28,14 @@ export const Button: React.FC<
       isDisabled && styles.disabled
     )
   );
+  const { style, ...styleXClasses } = stylex.attrs(
+    styles.button,
+    sizeStyles[size],
+    variantStyles[variant],
+    isDisabled && styles.disabled,
+    extraStyles
+  );
+
   return (
     <egtd-btn
       role='button'
@@ -37,13 +45,7 @@ export const Button: React.FC<
       c-variant={variant}
       {...rest}
       {...handleClick}
-      {...stylex.attrs(
-        styles.button,
-        sizeStyles[size],
-        variantStyles[variant],
-        isDisabled && styles.disabled,
-        extraStyles
-      )}
+      {...styleXClasses}
     >
       {text}
     </egtd-btn>
