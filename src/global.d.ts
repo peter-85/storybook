@@ -11,6 +11,10 @@ declare global {
         HTMLAttributes<HTMLDivElement>,
         HTMLDivElement
       >;
+      "egtd-p": DetailedHTMLProps<
+        HTMLAttributes<HTMLParagraphElement>,
+        HTMLParagraphElement
+      >;
     }
     DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
   }

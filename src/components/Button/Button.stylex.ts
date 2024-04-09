@@ -35,46 +35,41 @@ const lgButtonHeight = 40;
 const xlButtonHeight = 46;
 const xxlButtonHeight = 54;
 
-// This can not be used in the stylex create
-// const getNumberFromPixelValue = (pixelValue: string) => {
-//   return Number(pixelValue.slice(0, -2));
-// };
-
 export const sizeStyles = stylex.create({
   xs: {
     gap: "4px",
     borderRadius: themeTokens.btnBorderRadiusSmall,
     padding: `5px ${xsButtonHeight / 2}px`,
     minHeight: `${xsButtonHeight}px`,
-    fontSize: `${12 / 16}rem`,
+    fontSize: 12,
   },
   sm: {
     gap: "4px",
     borderRadius: themeTokens.btnBorderRadiusSmall,
     padding: `5px ${smButtonHeight / 2}px`,
     minHeight: `${smButtonHeight}px`,
-    fontSize: `${14 / 16}rem`,
+    fontSize: 14,
   },
   md: {
     gap: "6px",
     borderRadius: themeTokens.btnBorderRadiusMedium,
     padding: `5px ${mdButtonHeight / 2}px`,
     minHeight: `${mdButtonHeight}px`,
-    fontSize: `${14 / 16}rem`,
+    fontSize: 14,
   },
   lg: {
     gap: "6px",
     borderRadius: themeTokens.btnBorderRadiusMedium,
     padding: `5px ${lgButtonHeight / 2}px`,
     minHeight: `${lgButtonHeight}px`,
-    fontSize: `${16 / 16}rem`,
+    fontSize: 16,
   },
   xl: {
     gap: "8px",
     borderRadius: themeTokens.btnBorderRadiusLarge,
     padding: `5px ${xlButtonHeight / 2}px`,
     minHeight: `${xlButtonHeight}px`,
-    fontSize: `${18 / 16}rem`,
+    fontSize: 18,
     fontWeight: 700,
   },
   "2xl": {
@@ -82,7 +77,7 @@ export const sizeStyles = stylex.create({
     borderRadius: themeTokens.btnBorderRadiusLarge,
     padding: `5px ${xxlButtonHeight / 2}px`,
     minHeight: `${xxlButtonHeight}px`,
-    fontSize: `${20 / 16}rem`,
+    fontSize: 20,
     fontWeight: 700,
   },
 });

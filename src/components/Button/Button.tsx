@@ -3,9 +3,7 @@ import { styles, sizeStyles, variantStyles } from "./Button.stylex";
 import * as stylex from "@stylexjs/stylex";
 import { ButtonProps } from "./Button.types";
 
-export const Button: React.FC<
-  ButtonProps & HTMLCustomAttributes<HTMLDivElement>
-> = ({
+const Button: React.FC<ButtonProps & HTMLCustomAttributes<HTMLDivElement>> = ({
   variant = "primary",
   size = "xl",
   text,
@@ -15,29 +13,22 @@ export const Button: React.FC<
   extraStyles,
   ...rest
 }) => {
-  // const classProp = className ? { class: className } : undefined;
   const activeProp = isActive ? { active: isActive } : undefined;
   const disabledProp = isDisabled ? { disabled: isDisabled } : undefined;
   const handleClick = !isDisabled ? { onClick: onClick } : undefined;
 
-  console.log(
-    stylex.attrs(
+  const classProps = {
+    class: stylex.attrs(
       styles.button,
       sizeStyles[size],
       variantStyles[variant],
-      isDisabled && styles.disabled
-    )
-  );
-  const { style, ...styleXClasses } = stylex.attrs(
-    styles.button,
-    sizeStyles[size],
-    variantStyles[variant],
-    isDisabled && styles.disabled,
-    extraStyles
-  );
+      isDisabled && styles.disabled,
+      extraStyles
+    ).class,
+  };
 
   return (
-    <egtd-btn
+    <div
       role='button'
       {...activeProp}
       {...disabledProp}
@@ -45,9 +36,11 @@ export const Button: React.FC<
       c-variant={variant}
       {...rest}
       {...handleClick}
-      {...styleXClasses}
+      {...classProps}
     >
       {text}
-    </egtd-btn>
+    </div>
   );
 };
+
+export default Button;

@@ -5,7 +5,12 @@ import styleX from "vite-plugin-stylex";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), styleX()],
+  plugins: [
+    react(),
+    styleX({
+      useRemForFontSize: true,
+    }),
+  ],
   resolve: {
     alias: {
       "@src": "/src",
