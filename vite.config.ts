@@ -16,6 +16,7 @@ export default defineConfig({
       "@src": "/src",
       "@components": "/src/components",
       "@IndexComponents": "/src/index.ts",
+      "@storybookConfig": "/.storybook",
     },
   },
   test: {

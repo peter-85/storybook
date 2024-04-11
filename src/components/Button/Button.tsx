@@ -17,16 +17,6 @@ const Button: React.FC<ButtonProps & HTMLCustomAttributes<HTMLDivElement>> = ({
   const disabledProp = isDisabled ? { disabled: isDisabled } : undefined;
   const handleClick = !isDisabled ? { onClick: onClick } : undefined;
 
-  const classProps = {
-    class: stylex.attrs(
-      styles.button,
-      sizeStyles[size],
-      variantStyles[variant],
-      isDisabled && styles.disabled,
-      extraStyles
-    ).class,
-  };
-
   return (
     <div
       role='button'
@@ -36,7 +26,13 @@ const Button: React.FC<ButtonProps & HTMLCustomAttributes<HTMLDivElement>> = ({
       c-variant={variant}
       {...rest}
       {...handleClick}
-      {...classProps}
+      {...stylex.props(
+        styles.button,
+        sizeStyles[size],
+        variantStyles[variant],
+        isDisabled && styles.disabled,
+        extraStyles
+      )}
     >
       {text}
     </div>

@@ -1,6 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 
-export const colors = {
+export const COLORS = {
   // colors
   primaryColor: "#e42313",
   primaryDarkColor: "#b4001f",
@@ -32,7 +32,16 @@ export const colors = {
 
 export const themeTokens = stylex.defineVars({
   // colors
-  ...colors,
+  ...COLORS,
+
+  // btnSizes
+  btnXsHeight: "22px",
+  btnSmHeight: "28px",
+  btnMdHeight: "34px",
+  btnLgHeight: "40px",
+  btnXlHeight: "46px",
+  btnXxlHeight: "54px",
+
   //btn primary colors
   btnPrimaryColor: "#ffffff",
   btnPrimaryColorHover: "#ffffff",
@@ -55,24 +64,34 @@ export const themeTokens = stylex.defineVars({
   btnBorderRadiusSmall: "2px",
   btnBorderRadiusMedium: "2px",
   btnBorderRadiusLarge: "2px",
-  // break points
-  breakPointsMobileMini: "360",
-  breakPointsMobile: "768",
-  breakPointsTabletOrMobile: "1024",
-  breakPointsDesktop: "1025",
-  breakPointsDesktopLarge: "1366",
-  breakPointsDesktopExtraLarge: "1599",
-  breakPointsMobileMiniDown: "359",
-  breakPointsDesktopUXL: "1800",
 
-  //promo card
-  promoCardLayout2BodyBg: "#545454",
+  //promo card type1
+  promoCardLayout1BorderRadius: "3px",
+  promoCardLayout1DescriptionBg: COLORS.grey800Color,
+  promoCardLayout1DescriptionBorderTopColor: COLORS.yellowColor,
+  promoCardLayout1Shadow: "drop-shadow(rgba(0, 0, 0, 0.3) 0px 3px 6px)",
+  promoCardLayout1TitleColor: COLORS.whiteColor,
+  promoCardLayout1DescriptionColor: COLORS.whiteColor,
+  promoCardLayout1FooterColor: COLORS.whiteColor,
+
+  //promo card type3
+  promoCardLayout3BorderRadius: "10px",
+  promoCardLayout3DescriptionBg: "#2c1c40",
+  promoCardLayout3DescriptionBorderTopColor: COLORS.yellowColor,
+  promoCardLayout3TitleColor: COLORS.yellowColor,
+  promoCardLayout3DescriptionColor: COLORS.whiteColor,
+
+  //promo card type2
   promoCardLayout2ImageBg: "null",
   promoCardLayout2BorderRadius: "6px",
   promoCardImageLayout2BorderRadius: "6px",
   promoCardLayout2Shadow: "drop-shadow(rgba(0, 0, 0, 0.3) 0px 3px 6px)",
-  promoCardLayout2TitleColor: colors.whiteColor,
-  promoCardLayout2ImageTitleColor: colors.whiteColor,
-  promoCardLayout2DescriptionColor: colors.whiteColor,
-  promoCardLayout2FooterColor: colors.whiteColor,
+  promoCardLayout2TitleColor: COLORS.whiteColor,
+  promoCardLayout2ImageTitleColor: COLORS.whiteColor,
+  promoCardLayout2DescriptionBg: "#545454",
+  promoCardLayout2DescriptionColor: COLORS.whiteColor,
+  promoCardLayout2FooterColor: COLORS.whiteColor,
 });
+
+export const MEDIA_MOBILE = "@media (min-width: 768px)";
+export const MEDIA_DESKTOP = "@media (min-width: 1025px)";

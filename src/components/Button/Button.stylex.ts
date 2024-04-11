@@ -28,55 +28,48 @@ export const styles = stylex.create({
   },
 });
 
-const xsButtonHeight = 22;
-const smButtonHeight = 28;
-const mdButtonHeight = 34;
-const lgButtonHeight = 40;
-const xlButtonHeight = 46;
-const xxlButtonHeight = 54;
-
 export const sizeStyles = stylex.create({
   xs: {
     gap: "4px",
     borderRadius: themeTokens.btnBorderRadiusSmall,
-    padding: `5px ${xsButtonHeight / 2}px`,
-    minHeight: `${xsButtonHeight}px`,
+    padding: "5px 11px",
+    minHeight: themeTokens.btnXsHeight,
     fontSize: 12,
   },
   sm: {
     gap: "4px",
     borderRadius: themeTokens.btnBorderRadiusSmall,
-    padding: `5px ${smButtonHeight / 2}px`,
-    minHeight: `${smButtonHeight}px`,
+    padding: "5px 14px",
+    minHeight: themeTokens.btnSmHeight,
     fontSize: 14,
   },
   md: {
     gap: "6px",
     borderRadius: themeTokens.btnBorderRadiusMedium,
-    padding: `5px ${mdButtonHeight / 2}px`,
-    minHeight: `${mdButtonHeight}px`,
+    padding: "5px 17px",
+    minHeight: themeTokens.btnMdHeight,
     fontSize: 14,
   },
   lg: {
     gap: "6px",
     borderRadius: themeTokens.btnBorderRadiusMedium,
-    padding: `5px ${lgButtonHeight / 2}px`,
-    minHeight: `${lgButtonHeight}px`,
+    padding: "5px 20px",
+    minHeight: themeTokens.btnLgHeight,
     fontSize: 16,
   },
   xl: {
     gap: "8px",
     borderRadius: themeTokens.btnBorderRadiusLarge,
-    padding: `5px ${xlButtonHeight / 2}px`,
-    minHeight: `${xlButtonHeight}px`,
+    padding: "5px 23px",
+    minHeight: themeTokens.btnXlHeight,
     fontSize: 18,
     fontWeight: 700,
   },
   "2xl": {
     gap: "8px",
     borderRadius: themeTokens.btnBorderRadiusLarge,
-    padding: `5px ${xxlButtonHeight / 2}px`,
-    minHeight: `${xxlButtonHeight}px`,
+    padding: "5px 27px",
+    minHeight: themeTokens.btnXxlHeight,
     fontSize: 20,
     fontWeight: 700,
   },

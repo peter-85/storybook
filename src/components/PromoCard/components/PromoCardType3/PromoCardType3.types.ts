@@ -3,13 +3,12 @@ import {
   TimeAbbreviation,
 } from "../RemainingPeriod/RemainingPeriod.types";
 
-export interface PromoCardType2Props {
+export interface PromoCardType3Props {
   buttonText: string;
   onClick: React.MouseEventHandler<HTMLDivElement>;
   title?: string;
-  imageTitle: string;
+  description?: string;
   imageSource?: string;
-  description: string;
   dateDifference?: TimeData;
   timeAbbreviations?: TimeAbbreviation;
   statusText?: string;

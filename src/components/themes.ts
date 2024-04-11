@@ -2,6 +2,14 @@ import * as stylex from "@stylexjs/stylex";
 import { themeTokens } from "./themeTokens.stylex";
 
 export const sesameOverrideTokens = {
+  // btnSizes
+  btnXsHeight: "24px",
+  btnSmHeight: "30px",
+  btnMdHeight: "36px",
+  btnLgHeight: "42px",
+  btnXlHeight: "48px",
+  btnXxlHeight: "54px",
+
   //btn primary colors
   btnPrimaryColor: "#ffffff",
   btnPrimaryColorHover: "#ffffff",
@@ -10,7 +18,7 @@ export const sesameOverrideTokens = {
   btnPrimaryBgColor: "#644091",
   btnPrimaryBgColorHover: "#00772a",
   btnPrimaryBgColorActive: "#f5ce6f",
-  btnPrimaryBgColorDisabled: "#9e9fa0",
+  btnPrimaryBgColorDisabled3: "#9e9fa0",
   //btn secondary colors
   btnSecondaryColor: "#000000",
   btnSecondaryColorHover: "#000000",

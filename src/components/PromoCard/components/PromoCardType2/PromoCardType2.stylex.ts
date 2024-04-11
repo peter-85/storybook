@@ -1,8 +1,8 @@
-import { themeTokens } from "../../../themeTokens.stylex";
 import * as stylex from "@stylexjs/stylex";
+import { themeTokens } from "@components/themeTokens.stylex";
 
-const MEDIA_MOBILE = `@media (min-width: ${themeTokens.breakPointsMobile})`;
-const MEDIA_DESKTOP = `@media (min-width: ${themeTokens.breakPointsMobile})`;
+export const MEDIA_MOBILE = "@media (min-width: 768px)";
+export const MEDIA_DESKTOP = "@media (min-width: 1025px)";
 
 export const styles = stylex.create({
   wrapper: {
@@ -21,7 +21,6 @@ export const styles = stylex.create({
   },
   cardWrapper: {
     borderRadius: themeTokens.promoCardLayout2BorderRadius,
-    backgroundColor: themeTokens.promoCardLayout2BodyBg,
   },
   body: {
     display: "flex",
@@ -61,13 +60,9 @@ export const styles = stylex.create({
     display: "grid",
     gridGap: "8px",
     padding: "8px",
+    backgroundColor: themeTokens.promoCardLayout2DescriptionBg,
   },
   detailsDescription: {
-    display: "-webkit-box",
-    overflow: "hidden",
-    textOverflow: "-o-ellipsis-lastline",
-    "-webkit-box-orient": "vertical",
-    "-webkit-line-clamp": 3,
     minHeight: "clamp(2.75rem, calc(2.497rem + 1.08vw), 3.188rem)",
     lineHeight: 1.2,
     color: themeTokens.promoCardLayout2DescriptionColor,
@@ -78,10 +73,5 @@ export const styles = stylex.create({
     marginTop: "auto",
     justifyContent: "space-between",
     color: themeTokens.promoCardLayout2FooterColor,
-  },
-  textTruncate: {
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap",
   },
 });

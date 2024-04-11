@@ -7,13 +7,13 @@ import {
 } from "./Paragraph.stylex";
 import { ParagraphProps } from "./Paragraph.types";
 
-const Paragraph = ({
+const Paragraph: React.FC<ParagraphProps> = ({
   size = "md",
   color = "white",
   children,
   fontWeight = 400,
   extraStyles,
-}: ParagraphProps) => {
+}) => {
   return (
     <div
       {...stylex.props(

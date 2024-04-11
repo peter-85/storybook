@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Paragraph from "./Paragraph";
-import { colorVariants } from "@src/types/utils";
+import { colorVariants } from "@storybookConfig/utils";
 
 const meta = {
   title: "Design System/Atoms/Paragraph",
